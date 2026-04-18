@@ -48,15 +48,15 @@ Upload and screen up to **25 CVs simultaneously** against a single job descripti
 ```
 ┌─────────────────────────────────────────┐
 │           FRONTEND (Vercel)             │
-│         JavaScript + CSS               │
+│         JavaScript + CSS                │
 │                                         │
-│  Landing → Register/Login → Dashboard  │
-│  [JD Input] [CV Upload] [Results]      │
+│  Landing → Register/Login → Dashboard   │
+│  [JD Input] [CV Upload] [Results]       │
 └──────────────┬──────────────────────────┘
                │ REST API
 ┌──────────────▼──────────────────────────┐
 │            BACKEND (Render)             │
-│               Python                   │
+│               Python                    │
 │                                         │
 │  ┌───────────┐   ┌────────────────────┐ │
 │  │ CV Parser │──▶│  AI Scoring Engine │ │
