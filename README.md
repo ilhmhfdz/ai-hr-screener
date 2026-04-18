@@ -1,4 +1,4 @@
-# 🤖 AI HR Screener
+#  AI HR Screener
 
 > Eliminate bias and accelerate your recruitment pipeline with semantic AI screening.  
 > Batch process up to 25 CVs instantly and uncover top talent through explainable insights.
@@ -12,11 +12,6 @@
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 ![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=black)
 
-**[🚀 Live Demo →](https://ai-hr-screener-jet.vercel.app)**
-
-</div>
-
----
 
 ## 📌 The Problem
 
