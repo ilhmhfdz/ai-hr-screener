@@ -15,10 +15,10 @@ function getScoreClass(score) {
 
 function getRecLabel(rec) {
   const map = {
-    strongly_recommended: "⭐ Strongly Recommended",
-    recommended: "✅ Recommended",
+    strongly_recommended: "Strongly Recommended",
+    recommended: "Recommended",
     maybe: "Maybe",
-    not_recommended: "❌ Not Recommended",
+    not_recommended: "Not Recommended",
   };
   return map[rec] || rec;
 }
