@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import api from "@/lib/api";
 import Link from "next/link";
@@ -15,6 +15,19 @@ export default function RegisterPage() {
   });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [loadingTime, setLoadingTime] = useState(0);
+
+  useEffect(() => {
+    let interval;
+    if (loading) {
+      interval = setInterval(() => {
+        setLoadingTime((prev) => prev + 1);
+      }, 1000);
+    } else {
+      setLoadingTime(0);
+    }
+    return () => clearInterval(interval);
+  }, [loading]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -36,6 +49,20 @@ export default function RegisterPage() {
         <ThemeToggle />
       </div>
       <div className="auth-card animate-fade-in">
+        {loading && (
+          <div className="auth-loading-overlay">
+            <div className="pulse-circle">
+              <div className="spinner modal-spinner"></div>
+            </div>
+            <h3 className="loading-title">Waking up server...</h3>
+            <p className="loading-subtitle">
+              We are using a free Render instance which may take up to 50 seconds to start.
+              <br />Please hold on!
+            </p>
+            <div className="loading-timer">{loadingTime}s elapsed</div>
+          </div>
+        )}
+
         <div className="auth-header" style={{ marginBottom: 24 }}>
           <div className="sidebar-logo-icon" style={{ margin: "0 auto 16px" }}>AI</div>
           <h1 className="auth-title">Create Account</h1>
