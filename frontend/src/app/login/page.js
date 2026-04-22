@@ -106,11 +106,6 @@ export default function LoginPage() {
             )}
           </button>
         </form>
-
-        <div className="auth-footer">
-          Don&apos;t have an account?{" "}
-          <Link href="/register">Create one</Link>
-        </div>
       </div>
     </div>
   );
